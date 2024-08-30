@@ -9,6 +9,8 @@ import {
   import Home from './pages/LandingPage'
 //   import About from './pages/AboutPage'
   import Simulation from './pages/SimulationPage'
+  import Brands from './pages/Brands';
+  import Blog from './pages/Blog';
   import Dashboard from './pages/Dashboard'
   import NotFound from './ErrorPage' // optional, untuk halaman 404
   
@@ -18,7 +20,8 @@ import {
         <Route index element={<Home />} />
         {/* <Route path="about" element={<About />} /> */}
         <Route path="simulation" element={<Simulation />} />
-        {/* <Route path="blog" element={<Blog />} /> */}
+        <Route path="brands" element={<Brands />} />
+        <Route path="blog" element={<Blog />} />
         <Route path='admin' element={<Dashboard />} />
         <Route path="*" element={<NotFound />} /> {/* optional: rute untuk halaman 404 */}
       </Route>

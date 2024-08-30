@@ -7,8 +7,8 @@ const Nav = () => {
       {name:"Home",link:"/"},
       {name:"About",link:"/"},
       {name:"Simulation",link:"/simulation"},
-      {name:"Brands",link:"/"},
-      {name:"Blog",link:"/"},
+      {name:"Brands",link:"/brands"},
+      {name:"Blog",link:"/blog"},
     ];
     let [open,setOpen]=useState(false);
 
@@ -20,11 +20,11 @@ const Nav = () => {
                 Logo
             </div> */}
       
-            <div onClick={()=>setOpen(!open)} className='text-3xl h-fit absolute right-8 top-2 cursor-pointer md:hidden'>
+            <div onClick={()=>setOpen(!open)} className='text-3xl h-fit absolute right-8 top-2 cursor-pointer md:hidden z-20'>
                 <Menu name={open ? 'close':'menu'}/>
             </div>
 
-            <ul className={`md:flex md:items-center md:pb-0 pb-4 absolute md:static bg-blue-400 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-15 ':'top-[-490px]'}`}>
+            <ul className={`md:flex md:items-center md:pb-0 pb-4 absolute md:static bg-blue-400 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 text-center transition-all duration-500 ease-in ${open ? 'top-16 z-10':'top-[-490px]'}`}>
             {
               Links.map((link)=>(
                 <li key={link.name} className='md:ml-5 text-md md:my-0 my-7'>
